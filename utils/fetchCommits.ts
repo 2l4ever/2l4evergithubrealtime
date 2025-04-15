@@ -3,7 +3,7 @@ import { Commit } from '../types';
 
 export const fetchCommits = async (): Promise<Commit[]> => {
   const { data, error } = await supabase
-    .from('commits')
+    .from('githubcommits')
     .select('*')
     .order('timestamp', { ascending: false });
 
